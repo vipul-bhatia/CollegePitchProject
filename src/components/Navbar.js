@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useAuthContext } from "../hooks/useAuthContext"
 import { useLogout } from '../hooks/useLogout'
 
+
 // styles
 import styles from './Navbar.module.css'
 
@@ -33,6 +34,9 @@ export default function Navbar() {
             <li>Hello, {user.displayName}</li>
             <li>
               <button className="btn" onClick={logout}>Logout</button>
+            </li>
+            <li>
+              <button className="btn"><Link to='/ContactUs'>Contact Us</Link></button>
             </li>
           </>
         )}

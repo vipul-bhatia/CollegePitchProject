@@ -6,6 +6,7 @@ import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Navbar from './components/Navbar'
+import ContactForm from './pages/ContactUs/Contact'
 
 function App() {
   const { authIsReady, user } = useAuthContext()
@@ -19,6 +20,9 @@ function App() {
             <Route exact path="/">
               {!user && <Redirect to="/login" />}
               {user && <Home />}
+            </Route>
+            <Route exact path="/ContactUs">
+              <ContactForm />
             </Route>
             <Route path="/login">
               {user && <Redirect to="/" />}
